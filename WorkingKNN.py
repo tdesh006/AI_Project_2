@@ -18,6 +18,11 @@ def KNN(xTrain, testRecord, yTrain, k):
         
 
 
+def normalizeFeatures(X):
+
+    for feature in X.columns:
+        X[feature] = (X[feature] - X[feature].mean()) / X[feature].std()
+        X[feature] = X[feature].round(3)
 
 
 
@@ -31,10 +36,7 @@ def main():
     X = df.iloc[:, 1:]
     Y = df.iloc[:, 0]
 
-    for feature in X.columns:
-        X[feature] = (X[feature] - X[feature].mean()) / X[feature].std()
-        X[feature] = X[feature].round(3)
-
+    # normalizeFeatures(X)
     
     # print(X.head())
     # print(X.describe())
