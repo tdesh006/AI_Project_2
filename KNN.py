@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
+from sklearn.utils import resample
 import time
 
 def KNN(xTrain, testRecord, yTrain):
@@ -42,6 +43,8 @@ def normalizeFeatures(allFeatures):
 
 def forwardSelection(xTrain, xTest, yTrain, yTest):
 
+    reducedAccuracyCounter = 0
+
     startTime = time.time()
 
     currentFeatureSet = set()
@@ -57,7 +60,7 @@ def forwardSelection(xTrain, xTest, yTrain, yTest):
             if j not in currentFeatureSet:
                 featuresTemp = set(currentFeatureSet)   #Temp copy
                 featuresTemp.add(j)     #Add the j'th feature
-                print(f"Add the {j} feature")
+                print(f"Add feature {j}")
                 accuracy = callKNN(xTrain, xTest, yTrain, yTest, featuresTemp)
                 if accuracy > currentAccuracy:
                     currentAccuracy = accuracy
@@ -71,12 +74,20 @@ def forwardSelection(xTrain, xTest, yTrain, yTest):
             print(f"accuracy improvement = {(currentAccuracy - bestAccuracy)*100:.2f}%")
             bestAccuracy = currentAccuracy
             bestFeatureSet = set(currentFeatureSet)
+        else:
+            if reducedAccuracyCounter < 3:
+                reducedAccuracyCounter += 1
+            else:
+                timeTaken = time.time() - startTime
+                return bestFeatureSet, bestAccuracy, timeTaken
 
     timeTaken = time.time() - startTime
 
     return bestFeatureSet, bestAccuracy, timeTaken
 
 def backwardElimination(xTrain, xTest, yTrain, yTest):
+
+    startTime = time.time()
 
     currentFeatureSet = set(xTrain.columns)
     bestFeatureSet = set()
@@ -92,7 +103,7 @@ def backwardElimination(xTrain, xTest, yTrain, yTest):
             if j in currentFeatureSet:
                 featuresTemp = set(currentFeatureSet)   #Temp copy
                 featuresTemp.remove(j)     #Add the j'th feature
-                print(f"Remove the {j} feature")
+                print(f"Remove feature {j}")
                 accuracy = callKNN(xTrain, xTest, yTrain, yTest, featuresTemp)
                 if accuracy > currentAccuracy:
                     currentAccuracy = accuracy
@@ -107,7 +118,9 @@ def backwardElimination(xTrain, xTest, yTrain, yTest):
             bestAccuracy = currentAccuracy
             bestFeatureSet = set(currentFeatureSet)
 
-    return bestFeatureSet, bestAccuracy
+    timeTaken = time.time() - startTime
+
+    return bestFeatureSet, bestAccuracy, timeTaken
         
 
 
@@ -115,13 +128,31 @@ def backwardElimination(xTrain, xTest, yTrain, yTest):
 
 
 def main():
-    df = pd.read_csv('C:\\Users\\tejas\\OneDrive\\Documents\\Classes\\AI\\Proj2\\AI_Project_2\\CS170_large_Data__32.txt', delim_whitespace= True, header=None)
+
+    print("Welcome to Tejas Deshpande's Feature Selection Algorithm.")
+    inputFile = input('Type in the name of the file to test: ')
+
+    if 'csv' in inputFile:
+        df = pd.read_csv(inputFile, header=None)
+    else:
+        df = pd.read_csv(inputFile, delim_whitespace= True, header=None)
+
+    algorithmNumber = int(input('Type the number of the algorithm you want to run.\n 1) Forward Selection \n 2) Backward Elimination \n'))
+
+    randomSampled = int(input('Do you want to run the search on reduced randomly sampled data for faster results ? Enter the number of the choice \n 1) Yes \n 2) No \n'))
+
+
+    # df = pd.read_csv('CS170_small_Data__8.txt', delim_whitespace= True, header=None)
+    # df = pd.read_csv('CS170_large_Data__8.txt', delim_whitespace= True, header=None)
+    # df = pd.read_csv('CS170_XXXlarge_Data__8.txt', delim_whitespace= True, header=None)
+
+    if randomSampled == 1:
+        print(f"Dataset Shape before random sampling: {df.shape}")
+        df = resample(df, n_samples=int(df.shape[0]/2))
+        print(f"Dataset Shape after random sampling: {df.shape}")
 
     allFeatures = df.iloc[:, 1:]
     Y = df.iloc[:, 0]
-
-    # print(allFeatre.columns)
-
     normalizeFeatures(allFeatures)
     
     
@@ -132,38 +163,17 @@ def main():
     yTrain = yTrain.reset_index(drop=True)
     xTest = pd.DataFrame(xTest.reset_index(drop=True), columns=allFeatures.columns)
 
-    # print(xTrain.columns)
+    if algorithmNumber == 1:
+        bestFeatures, bestAccuracy, timeTaken = forwardSelection(xTrain, xTest, yTrain, yTest)
+        print(f"Accuracy : {bestAccuracy*100:.2f}% for best features : {bestFeatures}")
+        print(f"Time taken: {(timeTaken/60):.2f} minutes")
+        print("Forward Selection Search complete")
 
-    bestFeatures, bestAccuracy, timeTaken = forwardSelection(xTrain, xTest, yTrain, yTest)
-
-    # bestFeatures, bestAccuracy = backwardElimination(xTrain, xTest, yTrain, yTest)
-
-    print(f"Accuracy : {bestAccuracy*100:.2f}% for best features : {bestFeatures}")
-    print(f"Time taken: {timeTaken}")
-
-
-
-        
-
-
-    
-    # print(X.head())
-    # print(X.describe())
-
-
-    
-
-    #Print xtest and ytest to check indices
-
-    
-    # print(xTest)
-    
-        
-
-    
-
-    
-    # print(yPred)
+    else:
+        bestFeatures, bestAccuracy, timeTaken = backwardElimination(xTrain, xTest, yTrain, yTest)
+        print(f"Accuracy : {bestAccuracy*100:.2f}% for best features : {bestFeatures}")
+        print(f"Time taken: {(timeTaken/60):.2f} minutes")
+        print("Backward Elimination Search complete")
 
 
 
