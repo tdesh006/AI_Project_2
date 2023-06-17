@@ -1,0 +1,78 @@
+Output Log for Forward Selection for CS170_small_Data__8 
+
+Welcome to Tejas Deshpande's Feature Selection Algorithm.
+Type in the name of the file to test: CS170_small_Data__8.txt
+Type the number of the algorithm you want to run.
+ 1) Forward Selection 
+ 2) Backward Elimination 
+1
+Do you want to run the search on reduced randomly sampled data for faster results ? Enter the number of the choice 
+ 1) Yes 
+ 2) No 
+2
+We are on level 1 of the tree
+Add feature 1
+Add feature 2
+Add feature 3
+Add feature 4
+Add feature 5
+Add feature 6
+Add feature 7
+Add feature 8
+Add feature 9
+Add feature 10
+feature added : 4
+accuracy for current features: {4} is 84.67 %
+accuracy improvement = 84.67%
+We are on level 2 of the tree
+Add feature 1
+Add feature 2
+Add feature 3
+Add feature 5
+Add feature 6
+Add feature 7
+Add feature 8
+Add feature 9
+Add feature 10
+feature added : 9
+accuracy for current features: {9, 4} is 98.00 %
+accuracy improvement = 13.33%
+We are on level 3 of the tree
+Add feature 1
+Add feature 2
+Add feature 3
+Add feature 5
+Add feature 6
+Add feature 7
+Add feature 8
+Add feature 10
+feature added : 8
+accuracy for current features: {8, 9, 4} is 94.67 %
+We are on level 4 of the tree
+Add feature 1
+Add feature 2
+Add feature 3
+Add feature 5
+Add feature 6
+Add feature 7
+Add feature 10
+feature added : 3
+accuracy for current features: {8, 9, 3, 4} is 91.33 %
+We are on level 5 of the tree
+Add feature 1
+Add feature 2
+Add feature 5
+Add feature 6
+Add feature 7
+Add feature 10
+feature added : 10
+Add feature 1
+Add feature 2
+Add feature 5
+Add feature 6
+Add feature 7
+feature added : 1
+accuracy for current features: {1, 3, 4, 8, 9, 10} is 84.67 %
+Accuracy : 98.00% for best features : {9, 4}
+Time taken: 5.66 minutes
+Forward Selection Search complete

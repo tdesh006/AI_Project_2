@@ -1,0 +1,290 @@
+"CS170_large_Data__8.txt" output for Backward Elimination
+
+Accuracy using {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20} : 72.00
+We are on level 1 of the tree
+Remove the 1 feature
+Remove the 2 feature
+Remove the 3 feature
+Remove the 4 feature
+Remove the 5 feature
+Remove the 6 feature
+Remove the 7 feature
+Remove the 8 feature
+Remove the 9 feature
+Remove the 10 feature
+Remove the 11 feature
+Remove the 12 feature
+Remove the 13 feature
+Remove the 14 feature
+Remove the 15 feature
+Remove the 16 feature
+Remove the 17 feature
+Remove the 18 feature
+Remove the 19 feature
+Remove the 20 feature
+feature removed : 13
+accuracy for current features: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20} is 73.83 %
+accuracy improvement = 1.83%
+We are on level 2 of the tree
+Remove the 1 feature
+Remove the 2 feature
+Remove the 3 feature
+Remove the 4 feature
+Remove the 5 feature
+Remove the 6 feature
+Remove the 7 feature
+Remove the 8 feature
+Remove the 9 feature
+Remove the 10 feature
+Remove the 11 feature
+Remove the 12 feature
+Remove the 14 feature
+Remove the 15 feature
+Remove the 16 feature
+Remove the 17 feature
+Remove the 18 feature
+Remove the 19 feature
+Remove the 20 feature
+feature removed : 19
+accuracy for current features: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 20} is 76.33 %
+accuracy improvement = 2.50%
+We are on level 3 of the tree
+Remove the 1 feature
+Remove the 2 feature
+Remove the 3 feature
+Remove the 4 feature
+Remove the 5 feature
+Remove the 6 feature
+Remove the 7 feature
+Remove the 8 feature
+Remove the 9 feature
+Remove the 10 feature
+Remove the 11 feature
+Remove the 12 feature
+Remove the 14 feature
+Remove the 15 feature
+Remove the 16 feature
+Remove the 17 feature
+Remove the 18 feature
+Remove the 20 feature
+feature removed : 1
+accuracy for current features: {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 20} is 75.50 %
+We are on level 4 of the tree
+Remove the 2 feature
+Remove the 3 feature
+Remove the 4 feature
+Remove the 5 feature
+Remove the 6 feature
+Remove the 7 feature
+Remove the 8 feature
+Remove the 9 feature
+Remove the 10 feature
+Remove the 11 feature
+Remove the 12 feature
+Remove the 14 feature
+Remove the 15 feature
+Remove the 16 feature
+Remove the 17 feature
+Remove the 18 feature
+Remove the 20 feature
+feature removed : 9
+accuracy for current features: {2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 18, 20} is 76.50 %
+accuracy improvement = 0.17%
+We are on level 5 of the tree
+Remove the 2 feature
+Remove the 3 feature
+Remove the 4 feature
+Remove the 5 feature
+Remove the 6 feature
+Remove the 7 feature
+Remove the 8 feature
+Remove the 10 feature
+Remove the 11 feature
+Remove the 12 feature
+Remove the 14 feature
+Remove the 15 feature
+Remove the 16 feature
+Remove the 17 feature
+Remove the 18 feature
+Remove the 20 feature
+feature removed : 3
+accuracy for current features: {2, 4, 5, 6, 7, 8, 10, 11, 12, 14, 15, 16, 17, 18, 20} is 78.33 %
+accuracy improvement = 1.83%
+We are on level 6 of the tree
+Remove the 2 feature
+Remove the 4 feature
+Remove the 5 feature
+Remove the 6 feature
+Remove the 7 feature
+Remove the 8 feature
+Remove the 10 feature
+Remove the 11 feature
+Remove the 12 feature
+Remove the 14 feature
+Remove the 15 feature
+Remove the 16 feature
+Remove the 17 feature
+Remove the 18 feature
+Remove the 20 feature
+feature removed : 7
+accuracy for current features: {2, 4, 5, 6, 8, 10, 11, 12, 14, 15, 16, 17, 18, 20} is 78.67 %
+accuracy improvement = 0.33%
+We are on level 7 of the tree
+Remove the 2 feature
+Remove the 4 feature
+Remove the 5 feature
+Remove the 6 feature
+Remove the 8 feature
+Remove the 10 feature
+Remove the 11 feature
+Remove the 12 feature
+Remove the 14 feature
+Remove the 15 feature
+Remove the 16 feature
+Remove the 17 feature
+Remove the 18 feature
+Remove the 20 feature
+feature removed : 2
+accuracy for current features: {4, 5, 6, 8, 10, 11, 12, 14, 15, 16, 17, 18, 20} is 79.17 %
+accuracy improvement = 0.50%
+We are on level 8 of the tree
+Remove the 4 feature
+Remove the 5 feature
+Remove the 6 feature
+Remove the 8 feature
+Remove the 10 feature
+Remove the 11 feature
+Remove the 12 feature
+Remove the 14 feature
+Remove the 15 feature
+Remove the 16 feature
+Remove the 17 feature
+Remove the 18 feature
+Remove the 20 feature
+feature removed : 8
+accuracy for current features: {4, 5, 6, 10, 11, 12, 14, 15, 16, 17, 18, 20} is 80.67 %
+accuracy improvement = 1.50%
+We are on level 9 of the tree
+Remove the 4 feature
+Remove the 5 feature
+Remove the 6 feature
+Remove the 10 feature
+Remove the 11 feature
+Remove the 12 feature
+Remove the 14 feature
+Remove the 15 feature
+Remove the 16 feature
+Remove the 17 feature
+Remove the 18 feature
+Remove the 20 feature
+feature removed : 14
+accuracy for current features: {4, 5, 6, 10, 11, 12, 15, 16, 17, 18, 20} is 80.33 %
+We are on level 10 of the tree
+Remove the 4 feature
+Remove the 5 feature
+Remove the 6 feature
+Remove the 10 feature
+Remove the 11 feature
+Remove the 12 feature
+Remove the 15 feature
+Remove the 16 feature
+Remove the 17 feature
+Remove the 18 feature
+Remove the 20 feature
+feature removed : 6
+accuracy for current features: {4, 5, 10, 11, 12, 15, 16, 17, 18, 20} is 79.67 %
+We are on level 11 of the tree
+Remove the 4 feature
+Remove the 5 feature
+Remove the 10 feature
+Remove the 11 feature
+Remove the 12 feature
+Remove the 15 feature
+Remove the 16 feature
+Remove the 17 feature
+Remove the 18 feature
+Remove the 20 feature
+feature removed : 12
+accuracy for current features: {4, 5, 10, 11, 15, 16, 17, 18, 20} is 81.50 %
+accuracy improvement = 0.83%
+We are on level 12 of the tree
+Remove the 4 feature
+Remove the 5 feature
+Remove the 10 feature
+Remove the 11 feature
+Remove the 15 feature
+Remove the 16 feature
+Remove the 17 feature
+Remove the 18 feature
+Remove the 20 feature
+feature removed : 17
+accuracy for current features: {4, 5, 10, 11, 15, 16, 18, 20} is 82.33 %
+accuracy improvement = 0.83%
+We are on level 13 of the tree
+Remove the 4 feature
+Remove the 5 feature
+Remove the 10 feature
+Remove the 11 feature
+Remove the 15 feature
+Remove the 16 feature
+Remove the 18 feature
+Remove the 20 feature
+feature removed : 10
+accuracy for current features: {4, 5, 11, 15, 16, 18, 20} is 85.50 %
+accuracy improvement = 3.17%
+We are on level 14 of the tree
+Remove the 4 feature
+Remove the 5 feature
+Remove the 11 feature
+Remove the 15 feature
+Remove the 16 feature
+Remove the 18 feature
+Remove the 20 feature
+feature removed : 5
+accuracy for current features: {4, 11, 15, 16, 18, 20} is 86.17 %
+accuracy improvement = 0.67%
+We are on level 15 of the tree
+Remove the 4 feature
+Remove the 11 feature
+Remove the 15 feature
+Remove the 16 feature
+Remove the 18 feature
+Remove the 20 feature
+feature removed : 11
+accuracy for current features: {4, 15, 16, 18, 20} is 88.00 %
+accuracy improvement = 1.83%
+We are on level 16 of the tree
+Remove the 4 feature
+Remove the 15 feature
+Remove the 16 feature
+Remove the 18 feature
+Remove the 20 feature
+feature removed : 15
+accuracy for current features: {4, 16, 18, 20} is 91.17 %
+accuracy improvement = 3.17%
+We are on level 17 of the tree
+Remove the 4 feature
+Remove the 16 feature
+Remove the 18 feature
+Remove the 20 feature
+feature removed : 18
+accuracy for current features: {4, 16, 20} is 95.00 %
+accuracy improvement = 3.83%
+We are on level 18 of the tree
+Remove the 4 feature
+Remove the 16 feature
+Remove the 20 feature
+feature removed : 16
+accuracy for current features: {4, 20} is 96.33 %
+accuracy improvement = 1.33%
+We are on level 19 of the tree
+Remove the 4 feature
+Remove the 20 feature
+feature removed : 4
+accuracy for current features: {20} is 81.33 %
+We are on level 20 of the tree
+Remove the 20 feature
+feature removed : 20
+accuracy for current features: set() is 82.17 %
+Accuracy : 96.33% for best features : {4, 20}
+Time taken: 48.29 minutes

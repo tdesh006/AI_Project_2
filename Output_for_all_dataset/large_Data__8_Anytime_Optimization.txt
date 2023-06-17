@@ -1,0 +1,136 @@
+Output log for CS170_large_Data__8.txt with prunning 
+
+Welcome to Tejas Deshpande's Feature Selection Algorithm.
+Type in the name of the file to test: CS170_large_Data__8.txt
+Type the number of the algorithm you want to run.
+ 1) Forward Selection 
+ 2) Backward Elimination 
+1
+We are on level 1 of the tree
+Add the 1 feature
+Add the 2 feature
+Add the 3 feature
+Add the 4 feature
+Add the 5 feature
+Add the 6 feature
+Add the 7 feature
+Add the 8 feature
+Add the 9 feature
+Add the 10 feature
+Add the 11 feature
+Add the 12 feature
+Add the 13 feature
+Add the 14 feature
+Add the 15 feature
+Add the 16 feature
+Add the 17 feature
+Add the 18 feature
+Add the 19 feature
+Add the 20 feature
+feature added : 20
+accuracy for current features: {20} is 81.33 %
+accuracy improvement = 81.33%
+We are on level 2 of the tree
+Add the 1 feature
+Add the 2 feature
+Add the 3 feature
+Add the 4 feature
+Add the 5 feature
+Add the 6 feature
+Add the 7 feature
+Add the 8 feature
+Add the 9 feature
+Add the 10 feature
+Add the 11 feature
+Add the 12 feature
+Add the 13 feature
+Add the 14 feature
+Add the 15 feature
+Add the 16 feature
+Add the 17 feature
+Add the 18 feature
+Add the 19 feature
+feature added : 4
+accuracy for current features: {20, 4} is 96.33 %
+accuracy improvement = 15.00%
+We are on level 3 of the tree
+Add the 1 feature
+Add the 2 feature
+Add the 3 feature
+Add the 5 feature
+Add the 6 feature
+Add the 7 feature
+Add the 8 feature
+Add the 9 feature
+Add the 10 feature
+Add the 11 feature
+Add the 12 feature
+Add the 13 feature
+Add the 14 feature
+Add the 15 feature
+Add the 16 feature
+Add the 17 feature
+Add the 18 feature
+Add the 19 feature
+feature added : 8
+accuracy for current features: {8, 20, 4} is 95.33 %
+We are on level 4 of the tree
+Add the 1 feature
+Add the 2 feature
+Add the 3 feature
+Add the 5 feature
+Add the 6 feature
+Add the 7 feature
+Add the 9 feature
+Add the 10 feature
+Add the 11 feature
+Add the 12 feature
+Add the 13 feature
+Add the 14 feature
+Add the 15 feature
+Add the 16 feature
+Add the 17 feature
+Add the 18 feature
+Add the 19 feature
+feature added : 2
+accuracy for current features: {8, 2, 20, 4} is 93.67 %
+We are on level 5 of the tree
+Add the 1 feature
+Add the 3 feature
+Add the 5 feature
+Add the 6 feature
+Add the 7 feature
+Add the 9 feature
+Add the 10 feature
+Add the 11 feature
+Add the 12 feature
+Add the 13 feature
+Add the 14 feature
+Add the 15 feature
+Add the 16 feature
+Add the 17 feature
+Add the 18 feature
+Add the 19 feature
+feature added : 1
+accuracy for current features: {1, 2, 4, 8, 20} is 90.00 %
+We are on level 6 of the tree
+Add the 3 feature
+Add the 5 feature
+Add the 6 feature
+Add the 7 feature
+Add the 9 feature
+Add the 10 feature
+Add the 11 feature
+Add the 12 feature
+Add the 13 feature
+Add the 14 feature
+Add the 15 feature
+Add the 16 feature
+Add the 17 feature
+Add the 18 feature
+Add the 19 feature
+feature added : 7
+accuracy for current features: {1, 2, 4, 7, 8, 20} is 86.17 %
+Accuracy : 96.33% for best features : {20, 4}
+Time taken: 24.64 minutes
+Forward Selection Search complete
